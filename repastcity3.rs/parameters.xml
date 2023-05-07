@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<parameters>
+  
+	<parameter name="randomSeed" displayName="Default Random Seed"
+		type="int" defaultValue="__NULL__" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+		
+	<!--parameter name="AGENT_DEFINITION" displayName="Agent Definition"
+		type="java.lang.String" defaultValue="point:people.shp$repastcity3.agent.DefaultAgent"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /-->
+	<!--parameter name="AGENT_DEFINITION" displayName="Agent Definition"
+		type="java.lang.String" defaultValue="random:30"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /-->
+	
+	  	 <!--  <parameter name="AGENT_DEFINITION" displayName="Agent Definition"
+		type="java.lang.String" defaultValue="buildingpoint:0-110,1-347,2-413,3-225,4-362,5-755,6-72,7-30,8-151,9-22,10-87,11-78,12-212"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" />-->
+	<!--  
+        <parameter name="AGENT_DEFINITION" displayName="Agent Definition"
+		type="java.lang.String" defaultValue="buildingpoint:1-2"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /> -->
+	<!--  	
+		<parameter name="INFECTED_DEFINITION" displayName="INFECTED Definition"
+		type="java.lang.String" defaultValue="buildingpointInfected:3-1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /> 
+		
+		
+		<parameter name="AGENT_DEFINITION" displayName="Agent Definition"
+		type="java.lang.String" defaultValue="buildingpoint:1-100,2-120,554-100,682-200,699-200"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /> 
+		
+		-->
+		<parameter name="NUMBER_OF_AGENT" displayName="正常人生成数量"
+		type="java.lang.String" defaultValue="Agent:1000"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/>
+		
+		<parameter name="NUMBER_OF_INFECTEDAGENT" displayName="感染者生成数量"
+		type="java.lang.String" defaultValue="InfectedAgent:1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/> 
+		
+		<parameter name="NUMBER_OF_ASYMPTOMATICAGENT" displayName="无症状感染者生成数量"
+		type="java.lang.String" defaultValue="Asymptomatic:3"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"/> 
+<!--  		
+		<parameter name="SHELTER_DEFINITION" displayName="Shelter Definition"
+		type="java.lang.String" defaultValue="0:3000,1:3000,2:2000,3:1000,4:1000,5:1000,6:1000,7:1000,8:1000
+		,9:1000,10:1000,11:1000,12:1000,13:1000,14:1000,15:1000
+		,16:1000,17:1000,18:1000,19:1000,20:1000,21:1000,22:1000,23:100,24:100,25:100,26:100
+		,27:100,28:100,29:100,30:100,31:100,32:100,33:100,34:100,178:100,181:100,296:100,372:100,383:100
+		,401:100,403:100,405:100,406:100,407:100,408:100,440:100,456:100,465:300,480:400,530:100,540:100,541:100,545:100,546:100,549:100,550:200,562:100
+		,583:100,596:100,604:100,652:100,672:100,690:100,706:100,716:100,717:100,720:100,721:100,722:10000,723:100000,724:100000,531:100,553:200,554:200
+		,555:200,558:100,699:500"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" /> 
+	-->	
+<!--	
+	<parameter name="SHELTER_DEFINITION" displayName="Shelter Definition"
+		type="java.lang.String" defaultValue="0:0,1:0,2:100,3:100,4:100,5:100,6:100,7:100,8:100
+		,9:100,10:100,11:100,12:100,13:100,14:100,15:100
+		,16:100,17:100,18:100,19:100,20:100,21:100,22:100,23:100,24:100,25:100,26:100
+		,27:100,28:100,29:100,30:10,31:10,32:10,33:10,34:10,563:100"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter" />-->
+</parameters>

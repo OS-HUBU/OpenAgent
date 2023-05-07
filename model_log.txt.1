@@ -1,0 +1,85 @@
+3月 06, 2023 1:49:15 下午 org.geotools.resources.NIOUtilities log
+严重: Error attempting to close a mapped byte buffer : java.nio.DirectByteBuffer
+ JVM : 11.0.12 Eclipse Foundation
+java.lang.IllegalAccessException: class org.geotools.resources.NIOUtilities$1 cannot access class jdk.internal.ref.Cleaner (in module java.base) because module java.base does not export jdk.internal.ref to unnamed module @670f2466
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at org.geotools.resources.NIOUtilities$1.run(NIOUtilities.java:218)
+	at org.geotools.resources.NIOUtilities$1.run(NIOUtilities.java:206)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.geotools.resources.NIOUtilities.clean(NIOUtilities.java:205)
+	at org.geotools.data.PrjFileReader.close(PrjFileReader.java:161)
+	at org.geotools.data.PrjFileReader.<init>(PrjFileReader.java:90)
+	at org.geotools.data.PrjFileReader.<init>(PrjFileReader.java:62)
+	at org.geotools.data.shapefile.ShapefileSetManager.openPrjReader(ShapefileSetManager.java:101)
+	at org.geotools.data.shapefile.ShapefileFeatureSource.readAttributes(ShapefileFeatureSource.java:523)
+	at org.geotools.data.shapefile.ShapefileFeatureSource.buildFeatureType(ShapefileFeatureSource.java:479)
+	at org.geotools.data.shapefile.ShapefileFeatureStore.buildFeatureType(ShapefileFeatureStore.java:137)
+	at org.geotools.data.store.ContentFeatureSource.getAbsoluteSchema(ContentFeatureSource.java:328)
+	at org.geotools.data.store.ContentFeatureSource.getSchema(ContentFeatureSource.java:297)
+	at org.geotools.data.store.ContentDataStore.getSchema(ContentDataStore.java:293)
+	at repast.simphony.space.gis.ShapefileLoader.<init>(ShapefileLoader.java:97)
+	at repastcity3.environment.GISFunctions.readShapefile(GISFunctions.java:191)
+	at repastcity3.main.ContextManager.build(ContextManager.java:259)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6635)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6400)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5011)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4843)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.2621022Y閸ф劖鐖�:30.578797
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.2468323Y閸ф劖鐖�:30.574434
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.2468323Y閸ф劖鐖�:30.5720592
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.256473Y閸ф劖鐖�:30.5711861
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.26310819999999Y閸ф劖鐖�:30.571811899999997
+3月 06, 2023 1:49:16 下午 repastcity3.main.ContextManager build
+严重: X閸ф劖鐖�: 114.2556274Y閸ф劖鐖�:30.578797

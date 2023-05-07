@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/rapastcity3/Socket/SendMessageServer.java=UTF-8
+encoding//src/repastcity3/agent/AgentFactory.java=UTF-8
+encoding//src/repastcity3/agent/AsymptomaticAgent.java=UTF-8
+encoding//src/repastcity3/agent/IAgent.java=UTF-8
+encoding//src/repastcity3/agent/InfectedAgent.java=UTF-8
+encoding//src/repastcity3/agent/MyAgent.java=UTF-8
+encoding//src/repastcity3/agent/ThreadedAgentScheduler.java=UTF-8
+encoding//src/repastcity3/environment/Route.java=UTF-8
+encoding//src/repastcity3/main/ContextManager.java=UTF-8
