@@ -89,7 +89,6 @@ public class ThreadedAgentScheduler {
 	 * spawning threads to step burglars) and waits for it to finish
 	 */
 	public synchronized void agentStep() {
-		System.out.println(System.currentTimeMillis());
 		//结束
 		if(ContextManager.agentnotAthome <= 0 && ContextManager.infectedagentnotAthome <= 0 ) {
 			ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
@@ -107,6 +106,7 @@ public class ThreadedAgentScheduler {
 //		loginfo += Route.getSleepNum()+"闂備礁鎼悧婊勭濠婂牆鍚规い鎾卞灩閻鏌ㄩ悤鍌涘   ";
 //		loginfo += (ContextManager.agentCount-Route.getSleepNum())+"闂備線娼荤拹鐔煎礉韫囨稒鍎楅柣鎰靛墰閳绘柨鈹戦崒婊勫晸";
 		loginfo += "step:"+stepNum+".\t";
+		System.out.println(loginfo);
 		stepNum++;
 		this.burglarsFinishedStepping = false;
 		(new Thread(new ThreadController(this))).start();
@@ -126,8 +126,6 @@ public class ThreadedAgentScheduler {
 	 * waiting while burglars are stepping).
 	 */
 	public synchronized void setBurglarsFinishedStepping() {
-		System.out.println("一轮结束了");
-		System.out.println(System.currentTimeMillis());
 		this.burglarsFinishedStepping = true;
 		this.notifyAll();
 	}

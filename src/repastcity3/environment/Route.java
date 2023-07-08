@@ -221,9 +221,7 @@ public class Route implements Cacheable {
 		this.destinationBuilding = destinationBuilding;
 	}
 	
-	
-	
-	
+
 	
 	//濞ｈ濮為弬瑙勭《 Mr.wang
 //	public void gridRun(MyAgent agent) {

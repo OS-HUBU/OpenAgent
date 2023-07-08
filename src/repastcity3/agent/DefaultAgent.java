@@ -42,7 +42,9 @@ public class DefaultAgent implements IAgent {
 	
 	private static int uniqueID = 0;	//agent的ID
 	private int id;									
-	
+	public Route getRoute() {
+		return this.route;
+	}
 	/**
 	 * 总人数超过所有shelter的容纳数并且满了的时候，剩下的人需要random
 	 */
@@ -58,7 +60,6 @@ public class DefaultAgent implements IAgent {
 		this();
 		this.random = random;
 	}
-		
 	/**
 	 * 找到最近的shelter
 	 * @param home 若未初始化，则Home不是空；否则home是空
@@ -101,7 +102,7 @@ public class DefaultAgent implements IAgent {
 	 * @param home 若未初始化，则Home不是空；否则home是空;agent 为this
 	 * @return
 	 */
-	private Building judgeDestination(Building home,DefaultAgent agent){
+	public Building judgeDestination(Building home,DefaultAgent agent){
 		int buildingIDnum=0;
 		int num=0,firstDim=0,lastPart=0;
 		for(;num<agent.getID();){

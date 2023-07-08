@@ -72,6 +72,7 @@ public class SendMessageServer implements Runnable{
 	                //鍒ゆ柇鍋氫粈涔堟搷浣滅殑绫诲瀷
 	                String type=request.getMessageJson().getString("type");
 	                System.out.println(request.getMessageJson());
+	            
 	                if (type.equals("updateSetting"))
 	                {
 	                	if(FlagClazz.stepflag==false)

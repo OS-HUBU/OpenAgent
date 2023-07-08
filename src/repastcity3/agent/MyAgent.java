@@ -45,7 +45,6 @@ public class MyAgent  implements IAgent {
 	private Route route; // An object to move the agent around the world
 	private boolean Rehabilitated=false;
 	private boolean goingHome = false; // Whether the agent is going to or from their home
-	
 	private static int uniqueID = 0;	//agent閻ㄥ嚘D
 	private int id;	
 	private Double CustomSpeed;//自定义速度
@@ -332,7 +331,6 @@ public class MyAgent  implements IAgent {
 				}
 			}
 			else if (!hasSetoff && this.route == null) {
-				
 //				LOGGER.log(Level.INFO, "agent閻ㄥ埇d閵嗗锟藉锟藉锟藉锟藉锟藉锟藉锟藉锟藉锟斤拷"+this.id+"鏉╂稐绨＄粭顑跨癌娑擄拷==============================="+this.route);
 				this.goingHome = false; // Must be leaving home
 				this.hasSetoff = true;//濮濄倖顐肩亸杈ㄦЦ缁楊兛绔村▎鈥冲毉閸欙拷
@@ -354,8 +352,10 @@ public class MyAgent  implements IAgent {
 				
 			}
 			if(this.route == null)
+				
 				return;
 			if (!this.route.atDestination()) {
+//				System.out.println("keyi huoqv"+this.route.getDestination());
 				this.route.travel(this);//閸忋儱褰涢敍锟� 濮濄倕鍤遍弫鎵暏閺夈儴顢戞潻娑欐閼虫垝缍嬮敍灞煎▏閺呴缚鍏樻担鎾冲煂鏉堝墽娲伴惃鍕勾鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴宠劤鑴抽敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱掗敍渚婄磼閿涗緤绱�
 				LOGGER.log(Level.FINE, this.toString() + " travelling to " + this.route.getDestinationBuilding().toString());
 			} else if(this.route.forbid == true){//娑撳瓨妞傚ǎ璇插 Mr.wang

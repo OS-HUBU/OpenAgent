@@ -21,6 +21,7 @@ package repastcity3.agent;
 import java.util.List;
 
 import repastcity3.environment.Building;
+import repastcity3.environment.Route;
 
 /**
  * All agents must implement this interface so that it the simulation knows how
@@ -60,7 +61,7 @@ public interface IAgent {
 	 * Get the agent's home.
 	 */
 	Building getHome();
-	
+	Route getRoute();
 	/**
 	 * (Optional). Add objects to the agents memory. Used to keep a record of all the
 	 * buildings that they have passed.

@@ -60,6 +60,7 @@ import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.parameter.Parameters;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.RandomCartesianAdder;
+import repast.simphony.space.gis.DefaultGeography;
 import repast.simphony.space.gis.Geography;
 import repast.simphony.space.gis.GeographyParameters;
 import repast.simphony.space.gis.SimpleAdder;
@@ -70,6 +71,7 @@ import repast.simphony.space.grid.SimpleGridAdder;
 import repast.simphony.space.grid.WrapAroundBorders;
 import repastcity3.agent.AgentFactory;
 import repastcity3.agent.BuildingInfo;
+import repastcity3.agent.DefaultAgent;
 import repastcity3.agent.IAgent;
 import repastcity3.agent.InfectedAgent;
 import repastcity3.agent.MyAgent;
@@ -79,6 +81,7 @@ import repastcity3.environment.GISFunctions;
 import repastcity3.environment.Junction;
 import repastcity3.environment.NetworkEdgeCreator;
 import repastcity3.environment.Road;
+import repastcity3.environment.Route;
 import repastcity3.environment.SpatialIndexManager;
 import repastcity3.environment.TrafficJam;
 import repastcity3.environment.contexts.AgentContext;
@@ -784,7 +787,17 @@ public class ContextManager implements ContextBuilder<Object> {
 	public static synchronized Geometry getAgentGeometry(IAgent agent) {
 		return ContextManager.agentGeography.getGeometry(agent);
 	}
-
+	//end 
+	public static synchronized  Coordinate getAgentGeometryEnd(IAgent agent) {
+		System.out.println(agent.toString()); //myagent
+		Route dest = agent.getRoute();
+		if (dest==null)
+		{
+			return null;
+		}
+		return dest.getDestination();
+	}
+	
 	/**
 	 * Get a pointer to the agent context.
 	 * 
