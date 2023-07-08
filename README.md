@@ -18,7 +18,7 @@ http://139.219.132.124:8080/
 <table>
   <tr>
     <td>
-      <img src=""></img>
+      <img src="https://agentyou.oss-cn-beijing.aliyuncs.com/1.png"></img>
     </td>
   </tr>
 </table>
